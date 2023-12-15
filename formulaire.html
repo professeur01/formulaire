@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Magnifica Questionnaire Form Wizard includes Coronavirus Health questionnaire" />
+  <meta name="author" content="Ansonika" />
+  <title>Codeloccol | Formulaire de bus</title>
+
+  <script>
+    function submitForm() {
+      const formulaire = document.getElementById("wrapped");
+      formulaire.submit();
+    }
+  </script>
+
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="img/LOGO-CODELOCCOL-FAV.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png" />
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png" />
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+    href="img/apple-touch-icon-114x114-precomposed.png" />
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+    href="img/apple-touch-icon-144x144-precomposed.png" />
+
+  <!-- GOOGLE WEB FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <!-- BASE CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/menu.css" rel="stylesheet" />
+  <link href="css/form.css" rel="stylesheet" />
+  <link href="css/vendors.css" rel="stylesheet" />
+
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- YOUR CUSTOM CSS -->
+  <link href="css/custom.css" rel="stylesheet" />
+
+  <!-- MODERNIZR MENU -->
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+  <div id="preloader">
+    <div data-loader="circle-side"></div>
+  </div>
+  <!-- /Preload -->
+
+  <div id="loader_form">
+    <div data-loader="circle-side-2"></div>
+  </div>
+  <!-- /loader_form -->
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <a href="index.html"><img src="img/Codeloccol.png" alt="" width="178" height="45"
+              class="d-none d-md-block" /><img src="img/Codeloccol2 (1).png" alt="" width="62" height="45"
+              class="d-block d-md-none" /></a>
+        </div>
+        <div class="col-9">
+          <div id="social">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/codeloccol"><i class="icon-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/codeloccol"><i class="icon-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/codeloccol/"><i class="icon-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/codeloccol/"><i class="icon-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <!-- /social -->
+          <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+          <!-- /menu button -->
+          <nav>
+            <ul class="cd-primary-nav">
+              <li>
+                <a href="index.html" class="animated_link">Retour au formulaire</a>
+              </li>
+              <li>
+                <a href="instructions.html" class="animated_link">Instructions</a>
+              </li>
+              <li>
+                <a href="contacts.html" class="animated_link">Contactez-nous</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /menu -->
+        </div>
+      </div>
+    </div>
+    <!-- /container -->
+  </header>
+  <!-- /Header -->
+
+  <div class="container">
+    <div id="form_container">
+      <div class="row no-gutters">
+        <div class="col-lg-4">
+          <div id="left_form">
+            <figure>
+              <img class="png-bus" src="img/bus-homme.png" alt="" width="100" height="100" />
+            </figure>
+            <h2>Formulaire d'inscription <span>CODELOCCOL</span></h2>
+            <p>
+            CyberGuardian
+            </p>
+            <a href="www.codeloccol.org" class="btn_1 rounded yellow purchase" target="_parent">Notre charte</a>
+            <a href="www.codeloccol.org" class="btn_1 rounded mobile_btn yellow">Notre charte</a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div id="wizard_container">
+            <div id="top-wizard">
+              <div id="progressbar"></div>
+              <span id="location"></span>
+            </div>
+            <!-- /top-wizard -->
+            <form name="submit-to-google-sheet" id="wrapped" method="post"
+              action="https://script.google.com/macros/s/AKfycbzDcBNHV8P3TDxnO7veymefqGpSlbGXLA-Vc8h-jhdmEXdIKipeD6JhuJjNIBYb88KN0A/exec">
+              <input id="website" name="website" type="text" value="" />
+              <!-- ce input est là pour de raisons de sécurité -->
+              <div id="middle-wizard">
+                <div class="step">
+                  <h3 class="main_question">
+                    <i class="arrow_right"></i>Renseignez les informations
+                    vous concernant
+                  </h3>
+                  <div class="form-group add_top_30">
+                    <label for="first-name">Prénom :</label>
+                    <input type="text" name="first-name" id="first-name" class="form-control required"
+                      onchange="getVals(this, 'first-name_field');" autocomplete="given-name" />
+                  </div>
+                  <div class="form-group add_top_30">
+                    <label for="last-name">Nom :</label>
+                    <input type="text" name="last-name" id="last-name" class="form-control required"
+                      onchange="getVals(this, 'last-name_field');" autocomplete="family-name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="age">Age :</label>
+                    <input type="number" name="age" id="age" class="form-control required"
+                      onchange="getVals(this, 'age_field');" autocomplete="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="mail">Adresse E-mail :</label>
+                    <input type="email" name="mail" id="mail" class="form-control required"
+                      onchange="getVals(this, 'mail_field');" autocomplete="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="telephone">Mobile (whatsapp) :</label>
+                    <input type="number" name="telephone" id="telephone" class="form-control required"
+                      onchange="getVals(this, 'telephone_field')" autocomplete="tel" />
+                  </div>
+                  <div class="form-group">
+                    <label for="num_parent">Numero parent :</label>
+                    <input type="number" name="num_parent" id="num_parent" class="form-control required"
+                      onchange="getVals(this, 'num_parent_field');" autocomplete="organization-title" />
+                  </div>
+
+                  <div class="form-group" id="div-reason">
+                    <label for="niveauEtude">Niveau d'étude :</label>
+                    <select name="niveauEtude" id="niveauEtude" class="form-control required"
+                      onchange="getVals(this, 'niveauEtude_field');" autocomplete="off">
+                      <option value="Selectionner une option">
+                        Sélectionner une option
+                      </option>
+                      <option value="Visite professionnelle">
+                        Collège
+                      </option>
+                      <option value="Visite personnelle">
+                        Lycèe
+                      </option>
+                    </select>
+                  </div>
+                  <!--      Durée de visite -->
+                  <!-- Div radio -->
+                  <!-- Champ de texte pour "Autre" -->
+                  <div class="form-group" id="radio-other_div">
+                    <label class=autre for="etablissement">Etablissement :</label>
+                    <textarea name="etablissement" id="etablissement" class="form-control"
+                      onchange="getVals(this, 'etablissement_field')" autocomplete="off"></textarea>
+                  </div>
+
+                  <div class="form-group" id="radio-other_div">
+                    <label class=autre for="motivation">Motivation :</label>
+                    <textarea name="motivation" id="motivation" class="form-control"
+                      placeholder="Qu'est-ce qui vous motive à participer ?"
+                      onchange="getVals(this, 'motivation_field')" autocomplete="off"></textarea>
+                  </div>
+
+                  <!-- /Fin last step-->
+                </div>
+                <!-- /Fin middle-wizard -->
+               <!--  <div id="bottom-wizard">
+                  <button type="button" name="forward" class="forward" onclick="submitForm();">
+                    S'inscrire
+                  </button>
+                </div> -->
+   
+            </form>
+          </div>
+          
+          <!-- /Fin Wizard container -->
+        </div>
+      </div>
+      <!-- /Row -->
+    </div>
+    <!-- /Fin Form_container -->
+  </div>
+  <!-- /Fin container -->
+             <div class="mb-5 div_btn" id="bottom-wizard">
+    <button
+      type="button"
+      name="forward"
+      class="forward btn btn_submit"
+      onclick="submitForm();">
+      S'inscrire
+    </button>
+  </div>
+  <div class="container">
+    <div class="mb-5 div_btn" id="bottom-wizard">
+      <button
+        type="button"
+        name="forward"
+        class="forward btn btn_submit"
+        onclick="submitForm();">
+        S'inscrire
+      </button>
+    </div>
+    <footer id="home" class="clearfix">
+      <p>© 2023 Codeloccol</p>
+      <ul>
+        <li>
+          <a href="wwww.codeloccol.org" class="animated_link">Codeloccol.org</a>
+        </li>
+        <li>
+          <a href="instructions.html" class="animated_link">Instructions</a>
+        </li>
+        <li>
+          <a href="contacts.html" class="animated_link">Contactez-nous</a>
+        </li>
+      </ul>
+    </footer>
+    <!-- Fin footer-->
+  </div>
+  <!-- /Fin container -->
+
+  <div class="cd-overlay-nav">
+    <span></span>
+  </div>
+  <!-- /cd-overlay-nav -->
+  <div class="cd-overlay-content">
+    <span></span>
+  </div>
+  <!-- /cd-overlay-content -->
+
+  <!-- COMMON SCRIPTS -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/common_scripts.min.js"></script>
+  <script src="js/velocity.min.js"></script>
+  <script src="js/common_functions.js"></script>
+  <script>
+    document.querySelector("#question_2");
+    document.addEventListener("keyup", function countWord() {
+      let res = [];
+      let str = this.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+      str.map((s) => {
+        let trimStr = s.trim();
+        if (trimStr.length > 0) {
+          res.push(trimStr);
+        }
+      });
+      document.querySelector("#show").innerText = res.length;
+    });
+  </script>
+  <script>
+    document.querySelector("#question_7");
+    document.addEventListener("keyup", function countWord() {
+      let res = [];
+      let str = this.value.replace(/[\t\n\r\.\?\!]/gm, " ").split(" ");
+      str.map((s) => {
+        let trimStr = s.trim();
+        if (trimStr.length > 0) {
+          res.push(trimStr);
+        }
+      });
+      document.querySelector("#show_2").innerText = res.length;
+    });
+  </script>
+  <!-- Wizard script-->
+  <!--  SCRIPT POST SHEET -->
+
+  <!--  SCRIPT POST SHEET FIN-->
+  <!--script src="js/jquery-1.11.0.min.js" type="text/javascript"></script-->
+  <script src="js/bootstrap-select.min.js"></script>
+  <script src="js/index.js"></script>
+
+  <!-- DEBUT -->
+
+  <!-- //////////// -->
+
+  <!--    FIN -->
+</body>
+
+</html>
